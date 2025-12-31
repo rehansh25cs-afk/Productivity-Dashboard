@@ -1,0 +1,497 @@
+:root {
+  --pri: #151515;
+  --sec: #ffffff;
+  --tri: #1616ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main section.top {
+  width: 100%;
+  height: 40%;
+}
+main section.top img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main section.bottom {
+  width: 100%;
+  height: 60%;
+  background-color: var(--pri);
+  padding: 4rem 2rem;
+  text-align: start;
+  color: var(--sec);
+  font-size: 1rem;
+}
+main section.bottom .cards {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+main section.bottom .cards .todo {
+  background-image: url(./images/To-do\ img.jpg);
+}
+main section.bottom .cards .daily-planner {
+  background-image: url(./images/Daily\ planner\ img.jpg);
+}
+main section.bottom .cards .pomo {
+  background-image: url(./images/Pomodoro\ img.jpg);
+}
+main section.bottom .cards .quotes {
+  background-image: url(./images/Motivation\ img.jpg);
+}
+main section.bottom .cards .goals {
+  background-image: url(./images/Daily\ Goals\ img.jpg);
+}
+main section.bottom .cards div {
+  height: 250px;
+  width: 270px;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+main section.bottom .cards div:active {
+  scale: 0.96;
+}
+main .fulls {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--pri);
+  color: var(--sec);
+  transition: all 0.3s ease-in;
+}
+main .fulls .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main .fulls .top .back-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  transition: all 0.2s ease;
+}
+main .fulls .top .back-btn:active {
+  scale: 0.9;
+}
+main section.todo-full {
+  left: -100%;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+}
+main section.todo-full .top {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.todo-full .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 90%;
+  width: 100%;
+}
+main section.todo-full .bottom .left {
+  width: 40%;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(72, 72, 72, 0.668);
+}
+main section.todo-full .bottom .left form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.todo-full .bottom .left input {
+  width: 100%;
+  height: 50px;
+  background-color: var(--sec);
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+main section.todo-full .bottom .left textarea {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  border: none;
+  color: gray;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+main section.todo-full .bottom .left button {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: var(--tri);
+  border: none;
+  border-radius: 0.5rem;
+}
+main section.todo-full .bottom .right {
+  background-color: rgba(72, 72, 72, 0.668);
+  width: 60%;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: auto;
+}
+main section.todo-full .bottom .right div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.todo-full .bottom .right div .task-left {
+  display: flex;
+  gap: 1rem;
+}
+main section.todo-full .bottom .right div .task-left .input {
+  height: 10px;
+  width: 10px;
+}
+main section.todo-full .bottom .right div button {
+  border: none;
+  padding: 0.7rem;
+  background-color: var(--tri);
+  color: white;
+  border-radius: 0.5rem;
+}
+main section.daily-full {
+  left: -100%;
+  padding: 2rem;
+}
+main section.daily-full .top {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.daily-full .bottom {
+  background-color: rgba(255, 255, 255, 0.095);
+  height: 90%;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main section.daily-full .bottom div {
+  position: relative;
+  min-width: 47%;
+}
+main section.daily-full .bottom div input {
+  background-color: rgba(255, 255, 255, 0.193);
+  color: var(--sec);
+  height: 50px;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--pri);
+  border-radius: 1rem;
+}
+main section.daily-full .bottom div p {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 10px;
+}
+main section.pomo-full {
+  left: -100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+main section.pomo-full .bottom {
+  height: 100%;
+}
+main section.pomo-full .bottom .time-elements {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section.pomo-full .bottom .time-elements button {
+  background-color: var(--tri);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 0.7rem;
+  color: var(--sec);
+  font-weight: 400;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+main section.pomo-full .bottom .time-elements button:active {
+  scale: 0.9;
+}
+main section.pomo-full .bottom .time-elements .selecttime {
+  display: flex;
+  gap: 1rem;
+}
+main section.pomo-full .bottom .time-elements .time {
+  font-size: 4rem;
+}
+main section.pomo-full .bottom .time-elements .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+main section.quotes-full {
+  left: -100%;
+  padding: 2rem;
+  overflow: hidden;
+}
+main section.quotes-full .bottom {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.quotes-full .bottom .quotes {
+  height: 50%;
+  width: 40%;
+  background-color: rgba(207, 207, 207, 0.168627451);
+  border-radius: 1rem;
+  box-shadow: 0 0 30px var(--tri);
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+}
+main section.quotes-full .bottom .quotes .author {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+main section.goals-full {
+  left: -100%;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  main section.top {
+    height: 30%;
+  }
+  main section.bottom {
+    height: 70%;
+    padding: 2rem 1rem;
+  }
+  main section.bottom h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  main section.bottom .cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main section.bottom .cards div {
+    height: 200px;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  main section.todo-full {
+    padding: 1rem;
+  }
+  main section.todo-full .top {
+    margin-bottom: 1rem;
+  }
+  main section.todo-full .top h1 {
+    font-size: 1.2rem;
+  }
+  main section.todo-full .top .back-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  main section.todo-full .bottom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main section.todo-full .bottom .left {
+    width: 100%;
+    padding: 1rem;
+  }
+  main section.todo-full .bottom .left input {
+    height: 45px;
+  }
+  main section.todo-full .bottom .left button {
+    height: 45px;
+  }
+  main section.todo-full .bottom .right {
+    width: 100%;
+    padding: 1rem;
+  }
+  main section.daily-full {
+    padding: 1rem;
+  }
+  main section.daily-full .top {
+    margin-bottom: 1rem;
+  }
+  main section.daily-full .top h1 {
+    font-size: 1.2rem;
+  }
+  main section.daily-full .top .back-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  main section.daily-full .bottom {
+    padding: 0.5rem;
+  }
+  main section.daily-full .bottom div {
+    min-width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  main section.daily-full .bottom div input {
+    height: 45px;
+    padding: 1rem;
+  }
+  main section.daily-full .bottom div p {
+    font-size: 9px;
+  }
+  main section.pomo-full {
+    padding: 1rem;
+  }
+  main section.pomo-full .top h1 {
+    font-size: 1.2rem;
+  }
+  main section.pomo-full .top .back-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  main section.pomo-full .bottom .time-elements .selecttime {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  main section.pomo-full .bottom .time-elements .selecttime button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  main section.pomo-full .bottom .time-elements .time {
+    font-size: 3rem;
+  }
+  main section.pomo-full .bottom .time-elements .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  main section.pomo-full .bottom .time-elements .buttons button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  main section.quotes-full {
+    padding: 1rem;
+  }
+  main section.quotes-full .top h1 {
+    font-size: 1.2rem;
+  }
+  main section.quotes-full .top .back-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  main section.quotes-full .bottom .quotes {
+    width: 90%;
+    height: 60%;
+    padding: 1.5rem;
+  }
+  main section.quotes-full .bottom .quotes h1 {
+    font-size: 1.2rem;
+  }
+  main section.quotes-full .bottom .quotes .author h3 {
+    font-size: 1rem;
+  }
+}
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  main section.top {
+    height: 25%;
+  }
+  main section.bottom {
+    height: 75%;
+    padding: 1.5rem 0.5rem;
+  }
+  main section.bottom h2 {
+    font-size: 1.2rem;
+  }
+  main section.bottom .cards div {
+    height: 150px;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  main section.todo-full .top h1 {
+    font-size: 1rem;
+  }
+  main section.todo-full .bottom .left, main section.todo-full .bottom .right {
+    padding: 0.5rem;
+  }
+  main section.daily-full .top h1 {
+    font-size: 1rem;
+  }
+  main section.pomo-full .top h1 {
+    font-size: 1rem;
+  }
+  main section.pomo-full .bottom .time-elements .time {
+    font-size: 2.5rem;
+  }
+  main section.quotes-full .top h1 {
+    font-size: 1rem;
+  }
+  main section.quotes-full .bottom .quotes {
+    width: 95%;
+    height: 70%;
+    padding: 1rem;
+  }
+  main section.quotes-full .bottom .quotes h1 {
+    font-size: 1rem;
+  }
+  main section.quotes-full .bottom .quotes .author h3 {
+    font-size: 0.85rem;
+  }
+}/*# sourceMappingURL=style.css.map */
